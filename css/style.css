@@ -1,0 +1,381 @@
+html{
+    box-sizing: border-box; /* 1 */
+    font-size: 62.5%; /* 1 rem = 10 px */
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/* Globales */
+.contenedor{
+    max-width: 120rem;
+    margin: auto;
+    width: 95%;
+}
+h1, h2, h3, h4{
+    font-family: 'PT Sans', sans-serif;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+    line-height: 1.2;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2rem;
+}
+img{
+    max-width: 100%;
+}
+p{
+    font-size: 1.5rem;
+}
+/* Utilidades */
+.centrar-texto{
+    text-align: center;
+}
+.no-margin{
+    margin: 0;
+}
+/* Grid */
+@media (min-width: 768px) {
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .centrar-columnas{
+        justify-content: center;
+    }
+    .columna-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columna-4{
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+    .columna-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columna-10{
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columna-12{
+        flex: 0 0 100%;
+    }
+}
+
+/* Header */
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(min-width: 768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.logo{
+    margin-top: 2rem;
+    padding: 1rem;
+    height: 100px;
+    width: auto;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.site-header{
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+.site-header a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.site-header h1{
+    text-align: center;
+    font-weight: 400;
+}
+.site-header h1 span{
+    font-weight: 700;
+}
+.site-other{
+    height: 20vh;
+}
+/* Navegacio */
+
+.nav-link{
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+.nav-link:hover{
+    cursor: pointer;
+    color: #e1e1e1;
+    filter: brightness(1.2);
+    font-weight: bold;
+}
+/* Header */
+.texto-header{
+    color: aliceblue;
+    text-align: center;
+    margin-top:  10rem;
+}
+@media (min-width: 768px) {
+    .texto-header{
+        margin-top: 15rem;
+    }
+}
+.texto-cantidad{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.texto-header p{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+.img-product{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-product img{
+    width: 50%;
+    height: auto;
+}
+.cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border: solid 1px black;
+    border-radius: 5rem;
+    height: 40px;
+    width: 150px;
+}
+.cantidad button{
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.cantidad input{
+    width: 20px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+}
+.cantidad button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+
+}
+#quantity::-webkit-outer-spin-button,
+#quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#quantity {
+    -moz-appearance: textfield;
+}
+
+#quantity {
+    margin: 0 10px;
+    width: 50px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.accordion-button{
+    font-size: 1.6rem;
+}
+.accordion-body{
+    font-size: 1.6rem;
+}
+.btn-carrito{
+    background-color: black;
+    color: aliceblue;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+.accordion-button{
+    font-size: 1.6rem;
+}
+.accordion-body{
+    font-size: 1.6rem;
+}
+.backs img {
+    width: 80%;
+    height: auto;
+    transition: transform .3s;
+}
+.backs img:hover {
+    transform: scale(1.1);
+}
+.carousel-item {
+    text-align: center;
+    padding: 40px 20px;
+}
+.carousel-item h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carousel-item p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 50%;
+}
+.backs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+/* Contenido principal HOME */
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog,
+.cursos{
+    flex: 0 0 100%; /* 1 */
+
+}
+.cursos{
+    order: -1;
+}
+@media (min-width: 768px){
+    .contenido-principal{
+        justify-content: space-between;
+    }
+    .blog{
+        flex-basis: 66.6%;
+        order: -1;
+    }
+    .cursos{
+        flex-basis: calc(33.3% - 4rem);
+    }
+    
+}
+/* Opcional */
+.entrada-blog{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.entrada-blog:last-of-type{
+    border: none;
+}
+/* Cursos Sider */
+.cursos-lista{
+    padding: 0;
+    list-style: none;
+
+}
+.curso{
+    padding-top: 3rem ;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.curso:last-of-type{
+    border: none;
+}
+.curso p{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.curso p span,
+.curso .descripcion{
+    font-weight: 400;
+}
+/* Footer */
+.site-footer{
+    background-color: black;
+    padding: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 0;
+}
+.site-footer p{
+    color: aliceblue;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+.site-footer p span{
+    font-weight: 700;
+    
+}
+/* Formulario */
+form{
+    margin-top: 2rem;
+}
+.form-group{
+    margin-bottom: 2rem;
+}
+.form-group label{
+    font-size: 2rem;
+    display: block;
+    font-weight: 700;
+}
+.form-group input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #e1e1e1;
+}
+.form-group textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #e1e1e1;
+}
+.form-group button{
+    background-color: black;
+    color: aliceblue;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-group button:hover{
+    background-color: #333;
+}

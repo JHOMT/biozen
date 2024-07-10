@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/normalice.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+<header class="site-header site-other">
+    <div class="contenedor">
+        <div class="barra">
+            <a href="index.html" class="logo">
+                <img src="img/logo_biozen.png">
+            </a>
+            <nav class="nav">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page"href="nosotros.html">Nosotros</a>
+                <a class="nav-link" aria-current="page"href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </div> <!--.contenedor-->
+</header>
+<main class="container m-4 d-flex flex-wrap">
+    <section class="col-md-12">
+        <h1 class="text-center">Carrito de Compras</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody id="cartItems">
+                <tr>
+                    <td>Mix de Cacao con Adaptógenos - BioZen</td>
+                    <td id="cartQuantity">1</td>
+                    <td>S/. 25.55</td>
+                    <td id="cartTotal">S/. 25.55</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<footer class="site-footer no-margin">
+    <div class="contenedor">
+        <div class="barra">
+            <p>Bio<span>Zen</span></p>
+            <nav class="nav">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
+                <a class="nav-link" aria-current="page" href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cartQuantity = document.getElementById('cartQuantity');
+        const cartTotal = document.getElementById('cartTotal');
+        const pricePerUnit = 25.55;
+
+        let quantity = parseInt(localStorage.getItem('productQuantity'));
+        console.log(quantity);
+        console.log("localStorage.getItem('productQuantity')", localStorage.getItem('productQuantity'));
+        if (isNaN(quantity) || quantity < 1) {
+            quantity = 1;
+        }
+        cartQuantity.textContent = quantity;
+        cartTotal.textContent = `S/. ${(pricePerUnit * quantity).toFixed(2)}`;
+    });
+</script>
+
+</body>
+</html>
